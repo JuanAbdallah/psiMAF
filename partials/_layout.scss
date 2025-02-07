@@ -1,0 +1,452 @@
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+
+.bg-home{
+    position: relative;
+}
+
+.bg-home::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(6,18,30,0.1),#46534c), url('../assets/O7A9fAvYSXC7NTdz8gLQ_IMGP1039.jpg');
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    opacity: 0.9;
+}
+//------------------------
+
+// HERO -------
+.hero{
+    color: $white-normal;
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+
+    h1{
+        text-align: center;
+        line-height: 150%;
+        max-width: 940px;
+        font-size: 48px;
+    }
+
+    p{
+        text-align: center;
+        max-width: 1080px;
+        margin: 14px 0;
+    }
+}
+
+.button-contact {
+    padding: 14px 28px;
+    color: $white-normal;
+    background-color: $primary-dark;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 14px 0;
+    border-radius: 8px; /* Bordas mais suaves */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-contact:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Removendo a animação infinita e adicionando um efeito mais natural */
+
+
+@keyframes scaleButton{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.07);
+    }
+}
+
+@media screen and (max-width:768px) {
+    .hero{
+        min-height: 60vh;
+
+        h1{
+            font-size: 34px;
+            padding: 0 14px;
+            width: 100%;
+        }
+
+        p{
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+.hero h1{
+    font-size: 24px;
+}
+}
+//---------------------
+//about
+
+/* Seção Geral */
+.about {
+    background-color: $primary-normal;
+    color: $white-normal;
+    padding: 80px 20px;
+}
+
+/* Introdução com Card */
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.introduction .card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 30px;
+    max-width: 700px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.introduction .card:hover {
+    transform: translateY(-5px);
+}
+
+.introduction h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: $white-light;
+    margin-bottom: 16px;
+}
+
+.introduction p {
+    font-size: 18px;
+    color: $white-dark;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* Botão estilizado */
+.introduction a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: $white-normal;
+    background-color: $primary-normal;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito hover */
+.introduction a:hover {
+    background-color: $primary-dark;
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .introduction a {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+
+/* Seção Sobre */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+}
+
+.about-content img {
+    max-width: 500px;
+    border-radius: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-description {
+    max-width: 600px;
+}
+
+.about-description h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-description p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.about-description ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-description ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.about-description ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: $primary-light;
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .introduction .card {
+        padding: 20px;
+    }
+
+    .introduction h1 {
+        font-size: 24px;
+    }
+
+    .introduction p {
+        font-size: 16px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content img {
+        max-width: 100%;
+    }
+}
+
+//---------
+//services
+
+.services {
+    background-color: $white-light;
+    color: $black-normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: $primary-dark;
+    margin-bottom: 40px;
+}
+
+.abordagens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+}
+
+.abordagem {
+    background: $white-normal;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 2px solid $primary-light;
+}
+
+.abordagem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.abordagem h2 {
+    font-size: 22px;
+    color: $primary-dark;
+    margin-bottom: 15px;
+}
+
+.abordagem p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: $black-light;
+}
+
+.tratamento {
+    margin-top: 40px;
+    background: $white-normal;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    text-align: center;
+    border: 2px solid $secondary-light;
+}
+
+.tratamento h2 {
+    font-size: 24px;
+    color: $secondary-dark;
+    margin-bottom: 10px;
+}
+
+.tratamento p {
+    font-size: 16px;
+    color: $black-light;
+}
+
+.fac {
+    background-color: $white-light; /* Fundo suave */
+    color: $primary-dark; /* Texto principal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.fac h1 {
+    font-size: 2rem;
+    color: $primary-dark; /* Cor de destaque */
+    margin-bottom: 20px;
+}
+
+.fac div {
+    max-width: 800px;
+    width: 100%;
+    background: $white-normal;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(35, 34, 36, 0.1); /* Sombra suave */
+}
+
+.fac p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: $secondary-dark;
+}
+
+.fac p strong {
+    display: block;
+    font-size: 1.2rem;
+    color: $primary-normal;
+    margin-top: 20px;
+}
+
+/* Efeito hover para maior interatividade */
+.fac div:hover {
+    box-shadow: 0px 6px 15px rgba(35, 34, 36, 0.2);
+    transition: 0.3s ease-in-out;
+}
+
+
+
+
+//------------
+//footer
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0px;
+    gap: 24px;
+    color: $white-normal;
+}
+
+.footer-icons{
+    display: flex;
+    gap: 8px;
+    color: $white-normal;
+}
+
+.footer-logo{
+    width: 200px;
+}
+//---------
+//botao whatsapp
+
+.btn-whatsapp{
+
+    position: fixed;
+    bottom: 14px;
+    right: 24px;
+    z-index: 99;
+
+    img{
+        max-width: 74px;
+        transition: transform 0.4s;
+    }
+    
+    img:hover{
+        transform: scale(1.1);
+    }
+}
+
+.btn-whatsapp .tooltip-text{
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    top: 8px;
+    left: -144px;
+    padding: 4px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: $black-normal;
+    color: $white-normal;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.btn-whatsapp:hover .tooltip-text{
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .btn-whatsapp{
+        max-width: 64px;
+    }
+}
